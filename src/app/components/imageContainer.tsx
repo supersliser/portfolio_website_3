@@ -3,27 +3,20 @@
 import { styled } from "styled-components";
 import Title from "./title";
 import Image from 'next/image'
-
-
-const ContainerItem = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-`
+import ObjectContainer from "./objectContainer"
 
 const Container = styled.div`
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin: 10%;
+    justify-content: space-evenly;
+    align-items: end;
     flex-wrap: nowrap;
 `
 
-const ImageItem = styled(Image)`
-    border-radius: 20px;
+const ContainerItem = styled.div`
+    width: 100%;
 `
 
 export default function ImageContainer({ bigSubtitle, children, href }: {bigSubtitle?: boolean, children: string, href: string}) 
@@ -31,21 +24,22 @@ export default function ImageContainer({ bigSubtitle, children, href }: {bigSubt
     let num: number = 1;
     if (bigSubtitle == true)
     {
-        num = 3
+        num = 5
     }
     return (
-        <Container>
-            <ContainerItem>
-                <Title align="center" size={num}>{children}</Title>
-            </ContainerItem>
-            <ContainerItem>
-                <ImageItem
-                    src={href} 
-                    alt="This image could not be displayed"
-                    width={400}
-                    height={400}
-                />
-            </ContainerItem>
-        </Container>
+        <ObjectContainer>
+            <Container>
+                <ContainerItem>
+                    <Title align="right" size={num}>{children}</Title>
+                </ContainerItem>
+                    <Image
+                        style={{borderRadius:"20px", margin:"3px"}}
+                        src={href}
+                        alt="This image could not be displayed"
+                        width={400}
+                        height={400}
+                    />
+            </Container>
+        </ObjectContainer>
     )
 }

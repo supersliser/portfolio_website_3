@@ -15,7 +15,8 @@ const Background = styled.div`
 
 const Topper = styled.div`
     min-width: 50%;
-    min-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
     padding: 0;
     background-color: black;
     border-radius: 10px;
@@ -23,6 +24,9 @@ const Topper = styled.div`
     border-width: 1px;
     border-style: solid;
     box-shadow: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
 `
 
 export default function MainContainer({ children }: { children: React.ReactNode })
