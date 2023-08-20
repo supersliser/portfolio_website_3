@@ -6,19 +6,17 @@ const Background = styled.div`
     padding: 0;
     margin: 0;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 `
 
 const Topper = styled.div`
-    min-width: 80%;
-    min-height: 80%;
     padding: 0;
     background-color: black;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: #880494;
     border-width: 1px;
     border-style: solid;

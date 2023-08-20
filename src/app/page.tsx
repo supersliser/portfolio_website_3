@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Background from "./components/backgroundContainer"
+import Title from './components/title'
 import type { Metadata } from 'next'
+import ImageContainer from './components/imageContainer'
  
 
 export const metadata: Metadata = {
@@ -12,7 +14,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
 <Background>
-  <p>this is a test</p>
+    <Title>Thomas Lower's Personal Portfolio</Title>
+    <ImageContainer bigSubtitle={true} href='https://cdn.discordapp.com/attachments/873374731372494859/1142879708376223865/Headshot-Reversed.jpg'>Hi, My name is Tom</ImageContainer>
 </Background>
 
 /*     <main className={styles.main}>
