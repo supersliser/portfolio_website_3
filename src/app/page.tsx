@@ -1,6 +1,13 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Background from "./components/backgroundContainer"
+import type { Metadata } from 'next'
+ 
+
+export const metadata: Metadata = {
+  title: 'Home - TL Portfolio',
+  description: "The homepage for Thomas Lower's Portfolio",
+}
 
 export default function Home() {
   return (
