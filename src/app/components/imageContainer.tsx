@@ -5,9 +5,7 @@ import Title from "./title";
 import Image from 'next/image'
 
 
-const ImageItem = styled(Image)`
-    width: 50%;
-    max-height: 100%;
+const ContainerItem = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,16 +13,17 @@ const ImageItem = styled(Image)`
 `
 
 const Container = styled.div`
-    width: fit-content;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
     margin: 10%;
+    flex-wrap: nowrap;
 `
 
-const TitleItem = styled(Title)`
-    text-align: right;
+const ImageItem = styled(Image)`
+    border-radius: 20px;
 `
 
 export default function ImageContainer({ bigSubtitle, children, href }: {bigSubtitle?: boolean, children: string, href: string}) 
@@ -36,12 +35,17 @@ export default function ImageContainer({ bigSubtitle, children, href }: {bigSubt
     }
     return (
         <Container>
-            <TitleItem size={num}>{children}</TitleItem>
-            <ImageItem
-                src={href} 
-                alt="This image could not be displayed" 
-                width={400} 
-                height={400} />
+            <ContainerItem>
+                <Title align="center" size={num}>{children}</Title>
+            </ContainerItem>
+            <ContainerItem>
+                <ImageItem
+                    src={href} 
+                    alt="This image could not be displayed"
+                    width={400}
+                    height={400}
+                />
+            </ContainerItem>
         </Container>
     )
 }

@@ -14,6 +14,8 @@ const Background = styled.div`
 `
 
 const Topper = styled.div`
+    min-width: 50%;
+    min-height: 50%;
     padding: 0;
     background-color: black;
     border-radius: 10px;
