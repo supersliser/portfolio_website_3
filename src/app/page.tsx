@@ -1,9 +1,14 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Background from "./components/backgroundContainer"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+<Background>
+  <p>this is a test</p>
+</Background>
+
+/*     <main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -90,6 +95,6 @@ export default function Home() {
           </p>
         </a>
       </div>
-    </main>
+    </main> */
   )
 }
