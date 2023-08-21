@@ -5,7 +5,7 @@ import Title from "./title";
 import Image from 'next/image'
 import ObjectContainer from "./objectContainer"
 
-const Container = styled(ObjectContainer)`
+const Container = styled.div`
     margin: 0;
     width: 100%;
     display: flex;
@@ -27,17 +27,17 @@ export default function ImageContainer({ bigSubtitle, children, href, columnStar
         num = 5
     }
     return (
-        <Container columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd} >
+        <ObjectContainer columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd} >
             <ContainerItem>
                 <Title align="right" size={num}>{children}</Title>
             </ContainerItem>
                 <Image
-                    style={{borderRadius:"20px", margin:"3px"}}
+                    style={{borderRadius:"20px"}}
                     src={href}
                     alt="This image could not be displayed"
                     width={400}
                     height={400}
                 />
-        </Container>
+        </ObjectContainer>
     )
 }
