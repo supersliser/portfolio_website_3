@@ -10,14 +10,14 @@ import instagramImage from "../images/instagram.png"
 import linkedinImage from "../images/linkedin.png"
 import twitterImage from "../images/twitter.png"
 
-const Container = styled(ObjectContainer)`
+const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-`
-
+`;
 const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -25,41 +25,41 @@ const ImageContainer = styled.div`
     width: 50%;
     margin-top: 10%;
     margin-bottom: 10%;
-`
+`;
 
-export default function SocialsBox({ columnStart, columnEnd, rowStart, rowEnd}: {columnStart : number, columnEnd : number, rowStart : number, rowEnd : number}) {
+export default function SocialsBox() {
     return (
-        <Container columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd}>
+        <Container>
             <ImageContainer>
-                <Image 
+                <Image
                     src={twitterImage}
                     alt="This image could not be displayed"
                     width={100}
-                    height={100} 
+                    height={100}
                 />
-            </ImageContainer>                
+            </ImageContainer>
             <ImageContainer>
-                <Image 
+                <Image
                     src={instagramImage}
                     alt="This image could not be displayed"
                     width={100}
-                    height={100} 
+                    height={100}
                 />
             </ImageContainer>
             <ImageContainer>
-                <Image 
+                <Image
                     src={linkedinImage}
                     alt="This image could not be displayed"
                     width={100}
-                    height={100} 
+                    height={100}
                 />
             </ImageContainer>
             <ImageContainer>
-                <Image 
+                <Image
                     src={githubImage}
                     alt="This image could not be displayed"
                     width={100}
-                    height={100} 
+                    height={100}
                 />
             </ImageContainer>
         </Container>

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import ObjectContainer from "./objectContainer"
 
 const Container = styled.div`
+    position: relative;
     margin: 0;
     width: 100%;
     display: flex;
@@ -13,13 +14,12 @@ const Container = styled.div`
     justify-content: space-evenly;
     align-items: end;
     flex-wrap: nowrap;
-`
-
+`;
 const ContainerItem = styled.div`
     width: 100%;
-`
+`;
 
-export default function ImageContainer({ bigSubtitle, children, href, columnStart, columnEnd, rowStart, rowEnd }: {bigSubtitle?: boolean, children: string, href: string, columnStart: number, columnEnd: number, rowStart: number, rowEnd: number}) 
+export default function ImageContainer({ bigSubtitle, children, href }: {bigSubtitle?: boolean, children: string, href: string }) 
 {
     let num: number = 1;
     if (bigSubtitle == true)
@@ -27,7 +27,7 @@ export default function ImageContainer({ bigSubtitle, children, href, columnStar
         num = 5
     }
     return (
-        <ObjectContainer columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd} >
+        <Container>
             <ContainerItem>
                 <Title align="right" size={num}>{children}</Title>
             </ContainerItem>
@@ -38,6 +38,6 @@ export default function ImageContainer({ bigSubtitle, children, href, columnStar
                     width={400}
                     height={400}
                 />
-        </ObjectContainer>
+        </Container>
     )
 }
