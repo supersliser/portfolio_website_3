@@ -5,7 +5,7 @@ import Title from "./title";
 import Image from 'next/image'
 import ObjectContainer from "./objectContainer"
 
-const Container = styled.div`
+const Container = styled(ObjectContainer)`
     margin: 0;
     width: 100%;
     display: flex;
@@ -19,7 +19,7 @@ const ContainerItem = styled.div`
     width: 100%;
 `
 
-export default function ImageContainer({ bigSubtitle, children, href }: {bigSubtitle?: boolean, children: string, href: string}) 
+export default function ImageContainer({ bigSubtitle, children, href, columnStart, columnEnd, rowStart, rowEnd }: {bigSubtitle?: boolean, children: string, href: string, columnStart: number, columnEnd: number, rowStart: number, rowEnd: number}) 
 {
     let num: number = 1;
     if (bigSubtitle == true)
@@ -27,19 +27,17 @@ export default function ImageContainer({ bigSubtitle, children, href }: {bigSubt
         num = 5
     }
     return (
-        <ObjectContainer>
-            <Container>
-                <ContainerItem>
-                    <Title align="right" size={num}>{children}</Title>
-                </ContainerItem>
-                    <Image
-                        style={{borderRadius:"20px", margin:"3px"}}
-                        src={href}
-                        alt="This image could not be displayed"
-                        width={400}
-                        height={400}
-                    />
-            </Container>
-        </ObjectContainer>
+        <Container columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd} >
+            <ContainerItem>
+                <Title align="right" size={num}>{children}</Title>
+            </ContainerItem>
+                <Image
+                    style={{borderRadius:"20px", margin:"3px"}}
+                    src={href}
+                    alt="This image could not be displayed"
+                    width={400}
+                    height={400}
+                />
+        </Container>
     )
 }

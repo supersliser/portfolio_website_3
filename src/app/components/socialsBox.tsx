@@ -10,7 +10,7 @@ import instagramImage from "../images/instagram.png"
 import linkedinImage from "../images/linkedin.png"
 import twitterImage from "../images/twitter.png"
 
-const Container = styled.div`
+const Container = styled(ObjectContainer)`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -27,43 +27,41 @@ const ImageContainer = styled.div`
     margin-bottom: 10%;
 `
 
-export default function SocialsBox() {
+export default function SocialsBox({ columnStart, columnEnd, rowStart, rowEnd}: {columnStart : number, columnEnd : number, rowStart : number, rowEnd : number}) {
     return (
-        <ObjectContainer>
-            <Container>
-                <ImageContainer>
-                    <Image 
-                        src={twitterImage}
-                        alt="This image could not be displayed"
-                        width={100}
-                        height={100} 
-                    />
-                </ImageContainer>                
-                <ImageContainer>
-                    <Image 
-                        src={instagramImage}
-                        alt="This image could not be displayed"
-                        width={100}
-                        height={100} 
-                    />
-                </ImageContainer>
-                <ImageContainer>
-                    <Image 
-                        src={linkedinImage}
-                        alt="This image could not be displayed"
-                        width={100}
-                        height={100} 
-                    />
-                </ImageContainer>
-                <ImageContainer>
-                    <Image 
-                        src={githubImage}
-                        alt="This image could not be displayed"
-                        width={100}
-                        height={100} 
-                    />
-                </ImageContainer>
-            </Container>
-        </ObjectContainer>
+        <Container columnStart={columnStart} columnEnd={columnEnd} rowStart={rowStart} rowEnd={rowEnd}>
+            <ImageContainer>
+                <Image 
+                    src={twitterImage}
+                    alt="This image could not be displayed"
+                    width={100}
+                    height={100} 
+                />
+            </ImageContainer>                
+            <ImageContainer>
+                <Image 
+                    src={instagramImage}
+                    alt="This image could not be displayed"
+                    width={100}
+                    height={100} 
+                />
+            </ImageContainer>
+            <ImageContainer>
+                <Image 
+                    src={linkedinImage}
+                    alt="This image could not be displayed"
+                    width={100}
+                    height={100} 
+                />
+            </ImageContainer>
+            <ImageContainer>
+                <Image 
+                    src={githubImage}
+                    alt="This image could not be displayed"
+                    width={100}
+                    height={100} 
+                />
+            </ImageContainer>
+        </Container>
     )
 }

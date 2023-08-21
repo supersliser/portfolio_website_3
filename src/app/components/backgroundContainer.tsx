@@ -13,29 +13,24 @@ const Background = styled.div`
     justify-content: center;
 `
 
-const Topper = styled.div`
-    min-width: 50%;
-    max-width: 100%;
-    max-height: 100%;
+const Topper = styled.body`
+    width: 100vw;
+    height: 100vh;
     padding: 0;
     background-color: black;
-    border-radius: 10px;
-    border-color: #880494;
-    border-width: 1px;
-    border-style: solid;
-    box-shadow: 5px 10px;
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: grid;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 45vh 45vh;
+    justify-content: space-between;
+    align-content: space-between;
+    grid-gap: 10px;
 `
 
 export default function MainContainer({ children }: { children: React.ReactNode })
 {
     return (
-        <Background>
-            <Topper>
-                {children}
-            </Topper>
-        </Background>
+        <Topper>
+            {children}
+        </Topper>
     )
 }
