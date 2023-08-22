@@ -1,19 +1,16 @@
-'use client'
-
-import { styled } from "styled-components";
 import Link from "next/link"
+import styles from "../styles/link.module.css"
 
-const LinkStyleItem = styled(Link)<{ $size?: number}>`
-    text-decoration: none;
-    color: white;
-    font-size: ${props => props.$size || 2}rem;
-    text-align: center;
-`;
+export default function LinkItem({ children, href, size }: {children: React.ReactNode, href: string, size?: string}) {
 
-export default function LinkItem({ children, href, size }: {children: React.ReactNode, href: string, size: number}) {
+    if (size == null) {
+        size = "2";
+    }
+    size += "rem";
+
     return (
-        <LinkStyleItem href={href} $size={size}>
+        <Link className={styles.link} style={{fontSize: size}} href={href}>
             {children}
-        </LinkStyleItem>
+        </Link>
     )
 }

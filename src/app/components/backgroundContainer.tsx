@@ -1,22 +1,10 @@
-'use client'
-
-import { styled } from "styled-components";
-
-const Topper = styled.main`
-    padding: 0;
-    margin: 0;
-    background-color: black;
-    display: grid;
-    justify-content: space-around;
-    align-content: space-around;
-    grid-gap: 0px;
-`;
+import styles from "../styles/background.module.css"
 
 export default function MainContainer({ children }: { children: React.ReactNode })
 {
     return (
-        <Topper>
+        <div className={styles.backgroundContainer}>
             {children}
-        </Topper>
+        </div>
     )
 }

@@ -1,0 +1,9 @@
+.backgroundContainer {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    display: grid;
+    justify-content: space-around;
+    align-content: space-around;
+    grid-gap: 0px;
+}
