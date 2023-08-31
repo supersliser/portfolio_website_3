@@ -19,8 +19,8 @@
     border-width: 0;
     width: 100vw;
     min-height: 100vh;
-    padding-left: -20%;
-    padding-top: -20%;
+    left: -20%;
+    top: -20%;
     overflow: hidden;
     pointer-events:none;
 }
