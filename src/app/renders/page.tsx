@@ -1,5 +1,4 @@
 'use client'
-import type { Metadata } from 'next'
 import Background from "../components/backgroundContainer"
 import ObjectContainer from '../components/objectContainer'
 import Title from '../components/title'
@@ -10,11 +9,6 @@ import SiteContainer from '../components/siteContainer'
 import { useState } from 'react'
 import data from "../renders/rendersData.json"
 import HomeButton from '../components/homeButton'
-
-export const metadata: Metadata = {
-    title: 'Programs - TL Portfolio',
-    description: "See a list of Thomas' programs",
-  }
 
 export default function Programs() {
     const [item, setItem] = useState(Number);

@@ -9,7 +9,7 @@ import BigLink from "./components/bigLink"
  
 
 export const metadata: Metadata = {
-  title: 'Home - TL Portfolio',
+  title: 'TL Portfolio',
   description: "The homepage for Thomas Lower's Portfolio",
 }
 
