@@ -13,41 +13,37 @@ export default function SocialsBox() {
         <div className={styles.container}>
             <div className={styles.imageContainer}>
                 <LinkItem href="https://twitter.com/superslise58101">
-                    <Image
-                        src={twitterImage}
+                    <img
+                        src={twitterImage.src}
                         alt="This image could not be displayed"
-                        width={100}
-                        height={100}
+                        className={styles.imageItem}
                     />
                 </LinkItem>
             </div>
             <div className={styles.imageContainer}>
                 <LinkItem href="https://www.instagram.com/supersliserrrr/">
-                    <Image
-                        src={instagramImage}
+                    <img
+                        src={instagramImage.src}
                         alt="This image could not be displayed"
-                        width={100}
-                        height={100}
+                        className={styles.imageItem}
                     />
                 </LinkItem>
             </div>
             <div className={styles.imageContainer}>
                 <LinkItem href="https://www.linkedin.com/in/thomas-lower-234836245/">
-                    <Image
-                        src={linkedinImage}
+                    <img
+                        src={linkedinImage.src}
                         alt="This image could not be displayed"
-                        width={100}
-                        height={100}
+                        className={styles.imageItem}
                     />
                 </LinkItem>
             </div>
             <div className={styles.imageContainer}>
                 <LinkItem href="https://github.com/supersliser">
-                    <Image
-                        src={githubImage}
+                    <img
+                        src={githubImage.src}
                         alt="This image could not be displayed"
-                        width={100}
-                        height={100}
+                        className={styles.imageItem}
                     />
                 </LinkItem>
             </div>

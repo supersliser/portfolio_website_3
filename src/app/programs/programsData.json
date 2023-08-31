@@ -1,0 +1,74 @@
+[
+    {
+        "title": "2D Blender",
+        "images": [
+            {
+                "src": "https://cdn.discordapp.com/attachments/833059868767158276/1146541857334120458/Blender2D.png",
+                "caption": "An image displaying the interface"
+            }
+        ],
+        "text": [
+            "This program took 9 months to complete and was submitted as my A-Level Coursework. It is build in VB.net using the winforms system for interface. Outside of this it is based on the priniciple of Object-Oriented Programming represented in a graph data structure by separating vector shapes to vertices (nodes), edges (arcs) and faces (fills). Nodes stored a location while arcs and fills store colour. All of these are able to store this information either globally or temporally (as a keyframe) to enable animation."
+        ],
+        "link": "https://github.com/supersliser/2DBlender",
+        "languages": "VB.NET & Winforms"
+    },
+    {
+        "title": "MaebeeTV Discord Bot V2",
+        "images": [
+            {
+                "src": "https://cdn.discordapp.com/attachments/833059868767158276/1146518039056089149/image.png",
+                "caption": "Discord Logo"
+            }
+        ],
+        "text": [
+            "This was made to act as an interface for the company to access the database without the direct use of SQL. The database is setup in supabase while the bot is used in C#."
+        ],
+        "link": "https://github.com/supersliser/MaebeeTVDiscordBotV2",
+        "languages": "C#, Supabase & Discord API"
+    },
+    {
+        "title": "Menu Planner",
+        "images": [
+            {
+                "src": "https://cdn.discordapp.com/attachments/833059868767158276/1146518208996708443/EWP.png",
+                "caption": "Menu Planning Layout"
+            }
+        ],
+        "text": [
+            "This is a simple program. Made in asp.NET with C#. It uses the previous 4 days and attempts to generate a balanced diet so that the same meals are not eaten multiple times. The meals are stored in a supabase database and accessed."
+        ],
+        "link": "https://github.com/supersliser/MenuPlanner",
+        "languages": "ASP.NET, Supabase & C#"
+    },
+    {
+        "title": "Decision Maker",
+        "images": [
+            {
+                "src": "https://cdn.discordapp.com/attachments/833059868767158276/1146541857568997449/decisionMaker.png",
+                "caption": "Decision Maker Interface"
+            }
+        ],
+        "text": [
+            "This program is designed to assist with making decisions. It works by defining categories with optional datatypes and a value. The value determines the importance of the category to the decision. The datatype allows for automatically determining whether a given item is positive or negative.",
+            "The program then stores a list of fields, within each item of the field, a value is given as either positive (1), neutral (0) or negative (-1). This value can be determined automatically if there is a predefined datatype for the category.",
+            "The value of the field is then multiplied with the value of the category. The results are then added and displayed in the final column as a total score for that field."
+        ],
+        "link": "https://github.com/supersliser/DecisionMaker",
+        "languages": "C# & Winforms"
+    },
+    {
+        "title": "MaebeeTV Website",
+        "images": [
+            {
+                "src": "https://cdn.discordapp.com/attachments/833059868767158276/1146541857980026931/maebeetv.png",
+                "caption": "MaebeeTV Logo"
+            }
+        ],
+        "text": [
+            "MaebeeTV is one of the studios of which I am a part of. In my capacity as head of IT, I am tasked with managing, maintaining and upgrading the official website of the company. It is built within the javascript framework 'Astro' and is designed to function as a basis for the companies advertising as well as a portfolio of the various projects that the studio has created."
+        ],
+        "link": "https://github.com/supersliser/MaebeeTVAstro",
+        "languages": "AstroJS, HTML & CSS"
+    }
+]

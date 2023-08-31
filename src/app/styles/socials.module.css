@@ -9,9 +9,14 @@
 
 .imageContainer {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    height: 50%;
+}
+
+.imageItem {
+    width: 100%;
+    max-height: 100%;
 }
