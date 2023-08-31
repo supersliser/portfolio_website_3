@@ -16,7 +16,7 @@
 }
 
 .frame {
-    position: absolute;
+    position: relative;
     border-width: 0;
     width: 100vw;
     min-height: 100vh;
